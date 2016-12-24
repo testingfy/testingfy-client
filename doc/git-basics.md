@@ -15,3 +15,8 @@
 - git push --set-upstream origin testing-branch-concept-1
 
 
+* ---------------------------
+[procedures to create both local and remote branch]
+1. create the local branch => git checkout -b {branch-name}
+2. create the remote branch => git push origin {branch-name}
+
