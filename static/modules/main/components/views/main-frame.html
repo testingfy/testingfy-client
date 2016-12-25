@@ -1,0 +1,84 @@
+<!--
+  template to be refreshed later on...
+-->
+
+<div>
+  <nav class="navbar navbar-default" style="margin-bottom: 4px;">
+    <div class="container-fluid">
+      <!--
+        left side navbar icons
+      -->
+      <div class="navbar-header">
+        <span class="navbar-brand">
+          <i class="fa fa-gift fa-lg" aria-hidden="true"></i>
+          genie-US
+        </span>
+      </div>
+
+      <!--
+        right side navbar icons
+      -->
+      <div class="navbar navbar-nav navbar-right ">
+<!-- TODO: should be a component -->
+        <div class="navbar-brand dropdown">
+          <span class="cursor-pointer dropdown dropdown-toggle" type="button"
+            id="ddUser" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            {{_userName}}
+            <span class="caret"></span>
+          </span>
+          <ul class="dropdown-menu" aria-labelledby="ddUser">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="navbar navbar-nav navbar-right">
+<!-- TODO: should be a component (just like search) -->
+        <span class="navbar-brand">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i> {{ _cartAmount | currency:'USD':true:'1.2-2' }}
+          &nbsp;
+        </span>
+      </div>
+      <!-- search-textbox component -->
+      <div>
+        <search-textbox></search-textbox>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- fixed the width of the main contents to be 800px (suitable for most displays) -->
+  <div style="width: 800px; margin: auto;">
+    <!-- Routed views go here -->
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- 2nd level nav (menu-like) -->
+  <!--div class="container-fluid">
+    <div class="row">
+      <div class='col-md-3 col-xs-3'>
+        &nbsp;
+      </div>
+      <div class='col-md-9 col-xs-9'>
+        <div style="float: right;">
+          <span class='menu-label-big'>Food</span>
+          <span class='menu-label-big'>Wear</span>
+          <span class='menu-label-big'>Life</span>
+        </div>
+      </div>
+    </div>
+  </div-->
+
+
+
+
+  <!-- footers if any -->
+
+</div>

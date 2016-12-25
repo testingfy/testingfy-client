@@ -1,0 +1,7 @@
+
+[static (angular2) contents]
+- "static" folder
+- must add "index.html" as the bootstrap file for angular2
+
+[node html contents]
+- "public" folder

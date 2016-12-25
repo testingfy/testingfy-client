@@ -1,0 +1,20 @@
+
+<div
+  class='carousel-container carousel-image'
+  *ngIf='_imgTarget'
+  [ngStyle]="{ 'background-image': 'url('+_imgTarget.img+')' }"
+  (click)="gotoPage(_imgTarget.link)"
+>
+</div>
+
+<!-- style="position: relative; top: -50px;" -->
+<div class='carousel-navigator'>
+  <span *ngFor='let item of _imgSrc; let i = index;'>
+    <span *ngIf='i == _imgIndex'>
+      <i class='fa fa-circle carousel-navigator-dot-color' ></i>
+    </span>
+    <span *ngIf='i != _imgIndex'>
+      <i class='fa fa-circle-o carousel-navigator-dot-color' (click)='pickImg(i)' ></i>
+    </span>
+  </span>
+</div>

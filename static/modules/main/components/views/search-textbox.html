@@ -1,0 +1,23 @@
+
+<span class="navbar-brand">
+  <!-- ngModelChange vs change(when out-focus) -->
+  <input
+    [(ngModel)]='_textForSearch'
+    (ngModelChange)='doSearch($event)'
+    [ngClass]="{ 'search-textbox': true, 'show-inline': _searchMode==true, 'hide': _searchMode==false }" >
+  <i class="fa fa-search" aria-hidden="true" (click)='toggleSearch()' ></i>
+
+  <!-- search results overlay -->
+  <div *ngIf='_dataList!=null && _dataList.length>0'
+    class='search-result-border'
+    >
+    <div *ngFor='let data of _dataList; let i = index;'>
+      <div class='search-result-item'>
+        {{data}}
+      </div>
+      <hr class='search-result-separator' />
+    </div>
+    <!-- end of ngFor -->
+  </div>
+
+</span>
