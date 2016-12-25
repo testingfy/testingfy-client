@@ -1,0 +1,15 @@
+{
+    "server": {
+        "port": 9999,
+        "addressOrIP": "localhost",
+
+        "static-file-folders": [ "/Users/jason.wong/Development/logmonster-nodejs/logmonster-client/app/" ]
+    },
+
+    "logging": {
+        "folder": "logs",
+        "logfile-name": "idk.log",
+        "path-history": true
+    }
+
+}
