@@ -1,0 +1,8 @@
+
+[procedures]
+- npm init
+- follow the wizard
+- set the .gitignore if necessary (you can actually use the gitignore provided by github - choose "node")
+- licence => Apache-2.0 ,  but could be others depending on your business needs
+
+
