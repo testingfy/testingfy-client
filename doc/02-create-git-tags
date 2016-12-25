@@ -1,0 +1,7 @@
+
+[procedures]
+- git tag -a v1.0 -m "my version 1.0"
+- git push origin v0.1 => push the tag to the remote server, so that others could get the repository based on tagged version / label
+
+-- reference
+https://git-scm.com/book/en/v2/Git-Basics-Tagging
