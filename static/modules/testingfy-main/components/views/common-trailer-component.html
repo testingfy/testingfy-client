@@ -1,0 +1,70 @@
+<div class="trailer-container-top-line">
+  <div class="trailer-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class='trailer-menu-font trailer-menu-item'>Using testingfy</div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("1-product")'>
+            product </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("1-pricing")'>
+            pricing </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("1-support")'>
+            support </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div class='trailer-menu-font trailer-menu-item'>
+            testingfy <i class="fa fa-heart" aria-hidden="true" ></i>
+          </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("2-job")'>
+            jobs </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("2-customer")'>
+            customers </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("2-case-study")'>
+            case studies </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("2-event")'>
+            events </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("2-blog")'>
+            blogs </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div class='trailer-menu-font trailer-menu-item'>Legal</div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("3-privacy")'>
+            privacy </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("3-security")'>
+            security </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("3-service")'>
+            terms of service </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("3-policy")'>
+            policies </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div class='trailer-menu-font trailer-menu-item'>Links</div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("4-guide")'>
+            testingfy guides </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("4-video")'>
+            video guides </div>
+          <div class="trailer-menu-item trailer-label-font cursor-hand" (click)='trailerMenuClick("4-status")'>
+            status </div>
+        </div>
+      </div>  <!-- row -->
+    </div>  <!-- container-fluid -->
+  </div>
+
+  <div class="container-fluid" style="max-width: 800px; margin: auto; padding-top: 32px;">
+    <i class="fa fa-comments-o cursor-hand" aria-hidden="true"
+      title='replace with designed icon' style='font-size: 18px;'
+      (click)='trailerMenuClick("0-home")'></i>
+    <span class="pull-right">
+      <span class='cursor-hand' (click)='trailerContactMe()' >Contact us</span>
+      &nbsp;
+      <i class="fa fa-twitter  cursor-hand" aria-hidden="true"
+        style='font-size: 18px;' (click)='trailerTweet()'></i>
+      <i class="fa fa-envelope cursor-hand" aria-hidden="true"
+        style='font-size: 18px;' (click)='trailerMailMe()'></i>
+    </span>
+  </div>
+
+</div>
