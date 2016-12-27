@@ -73,3 +73,40 @@
 .trailer-menu-item {
   padding-bottom: 8px;
 }
+
+/* **************** */
+/*  landing related */
+
+.landing-container {
+  background: url('/static/img/landing/landing-main-2.jpg');
+  /*
+  width: calc(100%);
+  height: 600px;
+  */
+  height: 400px;
+  background-size: cover;
+}
+.landing-container-overlay {
+  background-color: rgba(50,50,50,0.5);
+  /* the height MUST match with the landing-container's height */
+  height: 400px;
+}
+.landing-core-image-centering {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  padding: auto;
+}
+.landing-core-image-btn {
+  font-size: 32px;
+  border-radius: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.landing-headline {
+  /* font-family: 'PT Sans', sans-serif; */
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: 'Baloo Thambi', cursive;
+  font-size: 40px;
+}

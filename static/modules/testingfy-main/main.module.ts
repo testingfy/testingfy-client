@@ -12,6 +12,7 @@ import { MainFrameComponent } from './components/main.frame.component';
 import { CommonHeaderComponent } from './components/common.header.component';
 import { CommonTrailerComponent } from './components/common.trailer.component';
 import { LandingComponent } from './components/landing.component';
+import { LandingApproachComponent } from './components/landing.approach.component';
 
 /*
  *  annotation (no need to have ";")
@@ -26,7 +27,8 @@ import { LandingComponent } from './components/landing.component';
     MainFrameComponent,
     CommonHeaderComponent,
     CommonTrailerComponent,
-    LandingComponent
+    LandingComponent,
+    LandingApproachComponent
 /*
     SearchTextboxComponent,
     LandingComponent,
