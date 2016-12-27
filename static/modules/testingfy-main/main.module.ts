@@ -14,6 +14,8 @@ import { CommonTrailerComponent } from './components/common.trailer.component';
 import { LandingComponent } from './components/landing.component';
 import { LandingApproachComponent } from './components/landing.approach.component';
 
+import { DimensionService } from './services/dimension.service';
+
 /*
  *  annotation (no need to have ";")
  */
@@ -39,7 +41,8 @@ import { LandingApproachComponent } from './components/landing.approach.componen
 */
   ],
   providers: [
-    RoutingProviders
+    RoutingProviders,
+    DimensionService
   ],
   bootstrap: [ MainFrameComponent ]
 })

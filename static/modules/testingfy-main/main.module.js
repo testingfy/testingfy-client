@@ -21,6 +21,7 @@ var common_header_component_1 = require("./components/common.header.component");
 var common_trailer_component_1 = require("./components/common.trailer.component");
 var landing_component_1 = require("./components/landing.component");
 var landing_approach_component_1 = require("./components/landing.approach.component");
+var dimension_service_1 = require("./services/dimension.service");
 /*
  *  annotation (no need to have ";")
  */
@@ -44,7 +45,8 @@ MainModule = __decorate([
             landing_approach_component_1.LandingApproachComponent
         ],
         providers: [
-            routes_1.RoutingProviders
+            routes_1.RoutingProviders,
+            dimension_service_1.DimensionService
         ],
         bootstrap: [main_frame_component_1.MainFrameComponent]
     }),
