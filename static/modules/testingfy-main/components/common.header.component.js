@@ -16,7 +16,22 @@ var CommonHeaderComponent = (function () {
      */
     function CommonHeaderComponent(_dimensionService) {
         this._dimensionService = _dimensionService;
+        this._dimenSize = dimension_service_1.DimensionService.SIZE_LAPTOP;
+        this._compactMenuVisible = false;
+        this._compactMenuOverlay = false;
+        // use let vs var
+        var ctx = this;
+        setTimeout((function () {
+            ctx._dimenSize = ctx._dimensionService.getDimensionConstant(window.innerWidth, window.innerHeight);
+            if (ctx._dimenSize <= dimension_service_1.DimensionService.SIZE_MOBILE_LARGE) {
+                ctx._compactMenuVisible = true;
+            }
+            else {
+                ctx._compactMenuVisible = false;
+            }
+        })(), 1000);
     }
+    CommonHeaderComponent.prototype.ngAfterViewInit = function () { };
     CommonHeaderComponent.prototype.headerMenuClick = function (menuId) {
         // TODO: navigate to another webpage
         console.log(menuId);
@@ -26,10 +41,74 @@ var CommonHeaderComponent = (function () {
         console.log(event);
     };
     CommonHeaderComponent.prototype.onResize = function (event) {
-        var sizeConstant = this._dimensionService.getDimensionConstant(event.target.innerWidth, event.target.innerHeight);
+        this._dimenSize = this._dimensionService.getDimensionConstant(event.target.innerWidth, event.target.innerHeight);
         // if smaller than MOBILE_LARGE -->
         // if == TABLET
         // if > TABLET (i.e. laptop or sth else wider)
+    };
+    CommonHeaderComponent.prototype.resetCompactMenuAttributes = function () {
+        // reset compact menu attributes
+        this._compactMenuVisible = true;
+        this._compactMenuOverlay = false;
+    };
+    CommonHeaderComponent.prototype.getCssClassForMenuFull = function () {
+        var css = '';
+        if (this._dimenSize <= dimension_service_1.DimensionService.SIZE_MOBILE_LARGE) {
+            css = 'hiding';
+        }
+        else if (this._dimenSize > dimension_service_1.DimensionService.SIZE_MOBILE_LARGE &&
+            this._dimenSize <= dimension_service_1.DimensionService.SIZE_TABLET) {
+            css = 'showing';
+            // reset compact menu attributes
+            this.resetCompactMenuAttributes();
+        }
+        else if (this._dimenSize > dimension_service_1.DimensionService.SIZE_TABLET) {
+            css = 'showing';
+            // reset compact menu attributes
+            this.resetCompactMenuAttributes();
+        }
+        return css;
+    };
+    CommonHeaderComponent.prototype.getCssClassForMenuCompact = function () {
+        var css = '';
+        if (this._dimenSize <= dimension_service_1.DimensionService.SIZE_MOBILE_LARGE) {
+            css = 'showing';
+        }
+        else if (this._dimenSize > dimension_service_1.DimensionService.SIZE_MOBILE_LARGE &&
+            this._dimenSize <= dimension_service_1.DimensionService.SIZE_TABLET) {
+            css = 'hiding';
+            // reset compact menu attributes
+            this.resetCompactMenuAttributes();
+        }
+        else if (this._dimenSize > dimension_service_1.DimensionService.SIZE_TABLET) {
+            css = 'hiding';
+            // reset compact menu attributes
+            this.resetCompactMenuAttributes();
+        }
+        return css;
+    };
+    CommonHeaderComponent.prototype.showCompactMenu = function () {
+        this._compactMenuVisible = true;
+        this._compactMenuOverlay = false;
+    };
+    CommonHeaderComponent.prototype.hideCompactMenu = function () {
+        this._compactMenuVisible = false;
+        // show menu overlay
+        this._compactMenuOverlay = true;
+    };
+    CommonHeaderComponent.prototype.getCssForShowingCompactMenu = function () {
+        var css = 'fa fa-bars cursor-hand ';
+        if (this._compactMenuVisible == false) {
+            css = 'hiding';
+        }
+        return css;
+    };
+    CommonHeaderComponent.prototype.getCssForHidingCompactMenu = function () {
+        var css = 'fa fa-times cursor-hand ';
+        if (this._compactMenuVisible == true) {
+            css = 'hiding';
+        }
+        return css;
     };
     return CommonHeaderComponent;
 }());
